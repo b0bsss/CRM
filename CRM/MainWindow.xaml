@@ -1,0 +1,38 @@
+﻿<Window x:Class="CRM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRM"
+        mc:Ignorable="d"
+        Title="Система документооборота" Height="1080" Width="1920" FontSize="20" FontWeight="Bold">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Frame Grid.Row="1" Grid.Column="1" Name = "mainFrame"/>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height = "60"/>
+                <RowDefinition Height = "auto"/>
+                <RowDefinition Height = "auto"/>
+                <RowDefinition Height = "60"/>
+                <RowDefinition Height = "*"/>
+            </Grid.RowDefinitions>
+            <Button Name = "letters" Grid.Row="0" Content = "Письма" Click="openLetters" Margin="2"/>
+            <Button Name = "design" Grid.Row="3" Content = "КД" Click="openDesign" Margin="2"/>
+            <Button Name = "incoming" Grid.Row="1" Content = "Входящие" Click="openIncoming" Margin="70, 0, 2, 0" Visibility="Collapsed" FontSize="18"/>
+            <Button Name = "outgoing" Grid.Row="2" Content = "Исходящие" Click="openOutgoing" Margin="70, 2, 2, 0" Visibility="Collapsed" FontSize="18"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="400"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Grid>
+</Window>
